@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500&display=swap');
+
+body{
+    font-family:'Libre Franklin', sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+nav {
+    z-index: 3;
+    height: 90px;
+    background-color:#131b1f;
+    position: sticky; top: 0;
+}
+
+
+nav img {
+    width: 100px;
+    height: 81px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+}
+
+
+/*NEW ONE*/
+nav ul li{
+    display:grid;
+    float: right;
+    line-height: 51px;
+    padding: 14px;
+}
+
+nav ul li a{
+    position: relative;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+  }
+  ul:hover {
+    overflow: visible;
+    padding: 0;
+  }
+  li {
+    position: relative;
+    float: left;
+
+  }
+  li:hover {
+    background-color: #019ee3;
+    transition: 0.7s ease-out;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+
+  }
+  a {
+    display: block;
+    padding: 0.8vh;
+    color: #ffff;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* second level */
+  ul ul {
+    z-index: 3;
+    max-height: 0;
+    padding: 0;
+  }
+  ul li:hover ul {
+    max-height: 999px;
+    margin: 0;
+    
+  }
+  ul ul li {
+    float: none;
+    display: grid;
+    padding: 0;
+}
+  ul ul li:hover {
+    background-color: #019ee3;
+    padding: 0;
+    transition-delay: 0.7s;
+  }
+
+/*slide show*/
+.slide-framer {
+  padding: -40x;box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);border-radius:20px;
+  overflow: hidden;
+  height: 675px;
+  width: 1200px;
+  margin-left: 50px;
+  margin-top: 20px;
+}
+
+/*slide show animation*/
+@keyframes slide_animation{
+0%  {left: 0px;}
+10% {left: 0px}
+20% {left: 1200px}
+30% {left: 1200px}
+40% {left: 2400px}
+50% {left: 2400px}
+60% {left: 1200px}
+70% {left: 1200px}
+80% {left: 0px}
+90% {left: 0px} 
+100%{left: 0px} 
+}
+
+.slide-images{
+  width: auto;
+  height: auto;
+  margin: 0 0 0 -2400px;
+  position: relative;
+  -webkit-animation-name: slide_animation;
+  -webkit-animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-play-state: running;
+}
+
+.img-container{
+  height:auto;
+  width: auto;
+  position: relative;
+  float: left;
+  margin: 0px auto;
+}
